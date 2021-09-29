@@ -128,5 +128,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# config file so we don't leak our token
-config.py
+# sqlite databases
+*.sqlite
