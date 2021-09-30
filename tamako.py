@@ -2,7 +2,7 @@
 import discord
 from discord.ext import commands
 
-import pylistenbrainz
+#import pylistenbrainz
 
 # get our token from config.py
 from config import token
@@ -61,7 +61,5 @@ async def nowplaying(ctx, arg=None):
         '```')
     else:
         await ctx.channel.send("There is no account linked for this user. You can link one by doing this ```&lbzsetup <ListenBrainz username here>```")
-
-        
 
 bot.run(token)

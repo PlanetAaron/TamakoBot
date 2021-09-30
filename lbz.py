@@ -1,6 +1,5 @@
 import pylistenbrainz
 import urllib3
-import json
 
 lbz = pylistenbrainz.ListenBrainz()
 
