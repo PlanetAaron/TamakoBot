@@ -59,6 +59,8 @@ async def nowplaying(ctx, arg=None):
         '\nAlbum:  ' + np.release_name + 
         '\nArtist: ' + np.artist_name + 
         '```')
+    else:
+        await ctx.channel.send("There is no account linked for this user. You can link one by doing this ```&lbzsetup <ListenBrainz username here>```")
 
         
 
