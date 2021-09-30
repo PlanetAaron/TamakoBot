@@ -16,4 +16,18 @@ def addentry(uid, uname):
 
     cursor.execute('INSERT INTO lbz VALUES("' + str(uid) + '", "' + str(uname) + '")')
     lbzn.commit()
-    print("Database Updated");
+    print("Database Updated")
+
+def isInDatabase(uid):
+    cursor.execute('select username from ' + table + ' where uid = "' + str(uid) + '"')
+    if(cursor.fetchone()):
+        return True
+    else:
+        return False
+
+def getUsername(uid):
+    if(isInDatabase(uid)):
+        cursor.execute('select username from ' + table + ' where uid = "' + str(uid) + '"')
+        results = cursor.fetchone()[0]
+        return results
+    return None
